@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import NavBar from './components/NavBar/NavBar.js';
 import './App.css';
-import CartWidget from './src/components/CartWidget/CartWidget.js';
+import CartWidget from './components/CartWidget/CartWidget.js';
 
 
 function App() {
