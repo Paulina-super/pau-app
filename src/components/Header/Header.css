@@ -1,0 +1,4 @@
+.Header {
+    display:flex;
+    background-color: linear-gradient(90deg, rgb(99, 91, 172) 0%, rgb(26, 23, 90) 100%);
+}

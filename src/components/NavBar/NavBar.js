@@ -1,25 +1,19 @@
 import React from 'react';
 import { MenuItems } from "./MenuItems";
 import './NavBar.css';
-import CartWidget from '../CartWidget/CartWidget.js';
 
-class NavBar extends React.Component {
- state={clicked: false}
 
- handleClick=()=>{
-     this.setState({ clicked: !this.state.clecked })
- }
-
-    render(){
-        return(
+function NavBar (){
+    return(
+        <div className="NavBar">
+            
             <nav className="NavbarItems">
-                <h1 className="navbar-logo">Samuel<i className="fas fa-cat"></i></h1>
-                
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times': 'fas fa-bars'}></i>
+                              
+                <div className="menu-icon">
+                    <i className='fas fa-times'></i>
                     
                 </div>
-                <ul className={this.state.clicked ?'nav-menu active':'nav-menu'}>
+                <ul className='nav-menu active'>
                     {MenuItems.map((item, index) => {
                         return(
                             <li key={index}>
@@ -31,8 +25,9 @@ class NavBar extends React.Component {
                     })}
                 </ul>
             </nav>
-        )
-    }
+        </div>
+
+    );
 }
 
 export default NavBar

@@ -1,15 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
-import NavBar from './components/NavBar/NavBar.js';
 import './App.css';
-import CartWidget from './components/CartWidget/CartWidget.js';
+import Header from './components/Header/Header';
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <CartWidget />
+      <Header />
+      
       <header className="App-header">
        <img src={logo} className="App-logo" alt="logo" />
         <p>
