@@ -11,7 +11,9 @@ function App() {
       <Header title='Samuel App'
       subtitle='Miau'/>
       <ItemListContainer greeting='¡Bienvenidos a Tienda Samuel!'/>   
-      <CardComponents />      
+      <div className="CardContainer"><CardComponents />
+      <CardComponents />
+      <CardComponents /></div>    
     </div>
   );
 }
