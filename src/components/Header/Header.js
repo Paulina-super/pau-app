@@ -2,14 +2,16 @@ import React from 'react';
 import './Header.css';
 import NavBar from '../NavBar/NavBar.js';
 import CartWidget from '../CartWidget/CartWidget.js';
-import 
 
-const Header = () => {
+
+
+
+const Header = ({title, subtitle}) => {
     return (
         <div className='Header'>
-            <h1 className="navbar-logo">Samuel<i className="fas fa-cat"></i></h1>
-            
-
+            <h1>{title}</h1>
+            <h2>{subtitle}</h2>
+                       
             <NavBar />
             <CartWidget />
         </div>
