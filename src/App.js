@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header title='Samuel App'
       subtitle='Miau'/>
-      <ItemListContainer />         
+      <ItemListContainer greeting='¡Bienvenidos a Tienda Samuel!'/>         
     </div>
   );
 }
