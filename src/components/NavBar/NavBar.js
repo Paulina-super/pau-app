@@ -6,10 +6,7 @@ import './NavBar.css';
 function NavBar (){
     return(
         <div className="NavBar">
-            
             <nav className="NavbarItems">
-                              
-               
                 <ul className='nav-menu active'>
                     {MenuItems.map((item, index) => {
                         return(
