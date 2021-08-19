@@ -9,10 +9,7 @@ function NavBar (){
             
             <nav className="NavbarItems">
                               
-                <div className="menu-icon">
-                    <i className='fas fa-times'></i>
-                    
-                </div>
+               
                 <ul className='nav-menu active'>
                     {MenuItems.map((item, index) => {
                         return(
