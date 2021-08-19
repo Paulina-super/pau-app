@@ -1,12 +1,13 @@
 import React from 'react';
 import { MenuItems } from "./MenuItems";
 import './NavBar.css';
-
+import CartWidget from '../CartWidget/CartWidget.js';
 
 function NavBar (){
     return(
         <div className="NavBar">
             <nav className="NavbarItems">
+            <CartWidget />
                 <ul className='nav-menu active'>
                     {MenuItems.map((item, index) => {
                         return(
@@ -15,6 +16,7 @@ function NavBar (){
                                     {item.title}
                                 </a>
                             </li>
+                            
                         )
                     })}
                 </ul>
