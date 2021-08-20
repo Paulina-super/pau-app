@@ -7,7 +7,7 @@ const ItemList = ()=>{
     const delay=2;
     
     useEffect(()=>{
-        let timer=setTimeOut(() =>setShow(true), delay *1000);
+        let timer=setTimeout(() =>setShow(true), delay *1000);
         fetch ('https://api.github.com/users')
         .then((response)=>response.json())
         .then((data)=>setGato(data));

@@ -7,7 +7,7 @@ const Item = ({image , name , description, button}) => (
         image='/images/avatar/large/elliot.jpg'
         name='Food'
         description='Cat'
-        button={extra}
+        
        />
   </div>
 )
