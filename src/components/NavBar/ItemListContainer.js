@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemList from './NavBar/ItemList';
+import ItemList from '../NavBar/ItemList.js';
 
 const ItemListContainer = ({greeting}) => {
     return (
