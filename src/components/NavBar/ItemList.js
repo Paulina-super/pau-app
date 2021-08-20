@@ -8,7 +8,7 @@ const ItemList = ()=>{
     
     useEffect(()=>{
         let timer=setTimeOut(() =>setShow(true), tiempo *1000);
-        fetch ()
+        fetch ('https://api.github.com/users')
         .then((response)=>response.json())
         .then((data)=>setGato(data));
         return()=>{
@@ -19,9 +19,9 @@ const ItemList = ()=>{
     return (
         <div className="ItemList">
             <h2>Hundiste  mi acorazado</h2>
-            {gato.map((user)=>{
-                return(
-                    return show ? <Item key ={user.id} data = {user}/> : <div></div>;
+            {
+            gato.map((user)=>{
+                return show ? <Item key ={user.id} data = {user}/> : <div></div>;
             })
         }
 
