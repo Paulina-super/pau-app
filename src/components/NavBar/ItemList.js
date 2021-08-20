@@ -2,19 +2,28 @@ import React ,{useState, useEffect} from 'react';
 import Item from './NavBar/Item';
 
 const ItemList = ()=>{
-    const [Gato]= useState([]);
+    const [gato, setGato]= useState([]);
+    const []= useState(false);
     const tiempo=2;
     
     useEffect(()=>{
         let timer=setTimeOut(() =>setShow(true), tiempo *1000);
         fetch ()
         .then((response)=>response.json())
-        .then((json)=>console.log(json));
-    });
+        .then((data)=>setGato(data));
+        return()=>{
+            clearTimeout(timer);
+        };
+    },[]);
 
     return (
         <div className="ItemList">
-
+            <h2>Hundiste  mi acorazado</h2>
+            {gato.map((user)=>{
+                return(
+                    return show ? <Item key ={user.id} data = {user}/> : <div></div>;
+            })
+        }
 
 
         </div>
