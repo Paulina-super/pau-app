@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'semantic-ui-react'
 
 const ItemCount = () => {
-    const [stockItems, setStockItems] = React.useState(0);
+    const [stockItems, setStockItems] = React.useState(10);
 
     const handleIncrement=()=>{
         setStockItems(stockItems +1);
