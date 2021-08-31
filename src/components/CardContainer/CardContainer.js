@@ -12,8 +12,8 @@ const CardContainer = () => {
 
     return (
         <div className="CardContainer">
-            {products.map(() => {
-                return <CardComponents />;
+            {products.map((product) => {
+                return <CardComponents key={products.id} data={product}/>;
             })}
         </div>
     )
