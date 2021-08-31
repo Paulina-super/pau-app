@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
 import ItemCount from '../Contador/ItemCount'
+import ItemDetail from './ItemDetail'
 
 const Item = ({data}) => (
   <Card>
@@ -10,6 +11,9 @@ const Item = ({data}) => (
         <span className="price">{data.price}</span>
     </Card.Meta>
     <ItemCount />
+    <button onClick>
+      <ItemDetail />
+    </button>
   </Card> 
   
 )
