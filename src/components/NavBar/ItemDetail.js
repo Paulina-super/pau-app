@@ -1,7 +1,10 @@
 import React from 'react'
 import ItemCount from '../Contador/ItemCount.js'
+import { Card, Image } from 'semantic-ui-react'
 
-const ItemDetail = () => {
+
+
+const ItemDetail = (data) => {
     return (
         <Card>
             <Image src={data.image} wrapped ui={false} />
