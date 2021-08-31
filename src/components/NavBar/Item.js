@@ -10,10 +10,9 @@ const Item = ({data}) => (
     <Card.Meta>
         <span className="price">{data.price}</span>
     </Card.Meta>
-    <ItemCount />
-    <button onClick>
-      <ItemDetail />
-    </button>
+    <ItemCount stock={10} />
+    <ItemDetail />
+    
   </Card> 
   
 )

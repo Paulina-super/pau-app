@@ -1,10 +1,21 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import ItemCount from '../Contador/ItemCount.js'
+import axios from 'axios';
 import { Card, Image } from 'semantic-ui-react'
 
 
 
-const ItemDetail = (data) => {
+const ItemDetail = ({id}) => {
+    const[detalle,setDetalle] = useState([]);
+    console.log(id);
+
+    useEffect(()=>{
+        axios('https://fakestoreapi.com/products/${id}')
+            .then((res) => setDetalle(res.data));
+            
+    }, []);
+
+
     return (
         <Card>
             <Image src={data.image} wrapped ui={false} />
