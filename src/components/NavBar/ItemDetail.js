@@ -11,7 +11,7 @@ const ItemDetail = () => {
                 <p>{data.description}</p>
             </Card.Meta>
             <ItemCount />
-            <button onClick={}>Agregar al carrito</button>
+            
         </Card> 
     )
 }
