@@ -5,9 +5,9 @@ import { Card, Image } from 'semantic-ui-react'
 
 
 
-const ItemDetail = ({id}) => {
+const ItemDetail = (data) => {
     const[detalle,setDetalle] = useState([]);
-    console.log(id);
+    console.log(data);
 
     useEffect(()=>{
         axios('https://fakestoreapi.com/products/${id}')

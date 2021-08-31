@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     
     
     useEffect(()=>{
-        axios('https://fakestoreapi.com/products')
+        axios('https://fakestoreapi.com/products/${id}')
             .then((res) => setData(res.data));
             setTimeout(() => {
                 setDetallando(false);  
