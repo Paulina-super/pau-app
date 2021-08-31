@@ -3,6 +3,8 @@ import Item from '../NavBar/Item.js';
 
 const ItemList = () => {
     const[products,setProducts] = useState([]);
+    
+    
     useEffect(()=>{
         fetch('http://localhost/magento2/index.php/rest/V1/categories/24/products')
             .then(response => response.json())
