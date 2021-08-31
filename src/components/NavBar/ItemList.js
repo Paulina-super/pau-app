@@ -1,36 +1,21 @@
-import React ,{useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react'
 import Item from '../NavBar/Item.js';
 
-const ItemList = ()=>{
-    const [gato,setGato]= useState([]);
-    const [show,setShow]= useState(false);
-    const delay=2;
-    
+const ItemList = () => {
+    const[products,setProducts] = useState([]);
     useEffect(()=>{
-        let timer=setTimeout(() =>setShow(true), delay *1000);
-        fetch ('https://api.github.com/users')
-        .then((response)=>response.json())
-        .then((data)=>setGato(data));
-        return()=>{
-            clearTimeout(timer);
-        };
-    },[]);
+        fetch('http://localhost/magento2/index.php/rest/V1/categories/24/products')
+            .then(response => response.json())
+            .then(json => setProducts(json));
+    }, []);
 
     return (
         <div className="ItemList">
-            <h2>Productos</h2>
-            {
-            gato.map((user)=>{
-                return show ? <Item key ={user.id} data = {user}/> : <div></div>;
-            })
-        }
-
-
+            {products.map((product) => {
+                return <Item key={products.id} data={product}/>;
+            })}
         </div>
-
     );
-
-
 };
 
 export default ItemList;
