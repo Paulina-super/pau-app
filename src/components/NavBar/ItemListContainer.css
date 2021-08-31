@@ -1,4 +1,13 @@
 .ItemContainer{
-    display:grid;
-    
+    display:grid;  
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Card1 Card2 Card3"
+        "Card4 Card5 Card6"
+        "Card7 Card8 Card9";
+          
+     
 }
