@@ -4,10 +4,10 @@ import ItemCount from '../Contador/ItemCount'
 
 const Item = ({data}) => (
   <Card>
-    <Image src={data.image_url} wrapped ui={false} />
-    <Card.Header>{data.sku}</Card.Header>
+    <Image src={data.image} wrapped ui={false} />
+    <Card.Header>{data.title}</Card.Header>
     <Card.Meta>
-        <span className="price">{data.regular_price_with_tax}</span>
+        <span className="price">{data.price}</span>
     </Card.Meta>
     <ItemCount />
   </Card> 

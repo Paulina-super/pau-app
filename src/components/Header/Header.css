@@ -1,7 +1,8 @@
 .Header {
     display:flex; 
     background-color: black;
-    text-align:center;  
+    text-align:center;
+    align-items: center;  
     color:white;
 }
 

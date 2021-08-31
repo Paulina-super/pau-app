@@ -6,7 +6,7 @@ const ItemList = () => {
     
     
     useEffect(()=>{
-        fetch('http://localhost/magento2/index.php/rest/V1/categories/24/products')
+        fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
             .then(json => setProducts(json));
     }, []);
