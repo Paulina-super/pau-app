@@ -3,17 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
 import ItemListContainer from './components/NavBar/ItemListContainer';
-import CardComponents from './components/CardComponents/CardComponents';
+import CardContainer from './components/CardContainer/CardContainer';
 
 function App() {
   return (
     <div className="App">
       <Header title='Samuel'
       subtitle='Pet Shop'/>
-      <ItemListContainer greeting='¡Bienvenidos a Tienda Samuel!'/>   
-      <div className="CardContainer"><CardComponents />
-      <CardComponents />
-      <CardComponents /></div>    
+        <ItemListContainer greeting='¡Bienvenidos a Tienda Samuel!'/>   
+        <CardContainer />
+            
+            
     </div>
   );
 }

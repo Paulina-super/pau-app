@@ -7,7 +7,7 @@ const ItemListContainer = ({greeting}) => {
         <div>
             <p>{greeting}</p>
             <ItemList />
-            <ItemCount />
+            
         </div>
     )
 }

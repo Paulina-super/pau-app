@@ -1,21 +1,16 @@
 import React from 'react'
 import { Card, Icon } from 'semantic-ui-react'
-
-
-const extra = (
-  <a>
-    <Icon name='user' />
-    16 Friends
-  </a>
-)
+import ItemCount from '../Contador/ItemCount'
 
 const CardComponents = ({image , name , description, button}) => (
   <Card
     image='/images/avatar/large/elliot.jpg'
     name='Food'
     description='Cat'
-    button={extra}
-  />
+   >
+    <ItemCount />
+  </Card> 
+  
 )
 
 export default CardComponents
