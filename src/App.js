@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header title='Samuel'
-      subtitle='Pet Shop'/>
+      subtitle='Shop'/>
         <ItemListContainer greeting='¡Bienvenidos a Tienda Samuel!'/>   
         
             

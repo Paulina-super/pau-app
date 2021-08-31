@@ -6,8 +6,7 @@ import CartWidget from '../CartWidget/CartWidget.js';
 function NavBar (){
     return(
         <div className="NavBar">
-            <nav className="NavbarItems">
-            <CartWidget />
+            <nav className="NavbarItems">            
                 <ul className='nav-menu active'>
                     {MenuItems.map((item, index) => {
                         return(
@@ -15,11 +14,11 @@ function NavBar (){
                                 <a className={MenuItems.cName} href={item.url}>
                                     {item.title}
                                 </a>
-                            </li>
-                            
+                            </li>                            
                         )
                     })}
                 </ul>
+                <CartWidget />
             </nav>
         </div>
 
