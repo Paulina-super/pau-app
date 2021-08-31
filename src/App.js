@@ -8,8 +8,8 @@ import CardComponents from './components/CardComponents/CardComponents';
 function App() {
   return (
     <div className="App">
-      <Header title='Samuel App'
-      subtitle='Miau'/>
+      <Header title='Samuel'
+      subtitle='Pet Shop'/>
       <ItemListContainer greeting='¡Bienvenidos a Tienda Samuel!'/>   
       <div className="CardContainer"><CardComponents />
       <CardComponents />

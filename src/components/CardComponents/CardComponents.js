@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Icon } from 'semantic-ui-react'
 
+
 const extra = (
   <a>
     <Icon name='user' />

@@ -2,7 +2,7 @@ import React ,{useState, useEffect} from 'react';
 import Item from '../NavBar/Item.js';
 
 const ItemList = ()=>{
-    const [gato, setGato]= useState([]);
+    const [gato,setGato]= useState([]);
     const [show,setShow]= useState(false);
     const delay=2;
     
@@ -18,7 +18,7 @@ const ItemList = ()=>{
 
     return (
         <div className="ItemList">
-            <h2>Hundiste  mi acorazado</h2>
+            <h2>Productos</h2>
             {
             gato.map((user)=>{
                 return show ? <Item key ={user.id} data = {user}/> : <div></div>;
