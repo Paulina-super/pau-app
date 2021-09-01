@@ -2,6 +2,10 @@ import React from 'react';
 import { MenuItems } from "./MenuItems";
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget.js';
+import {Link} from 'react-router-dom'
+
+
+
 
 function NavBar (){
     return(
