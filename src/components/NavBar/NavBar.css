@@ -8,12 +8,14 @@
   z-index:1;
 }
 
-.navbar-logo {
+.navbar img {
+  height: 150px;
   color: black;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
 }
+
 
 .fa-cat {
   margin-left: 0.5rem;

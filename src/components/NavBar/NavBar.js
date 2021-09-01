@@ -17,9 +17,10 @@ function NavBar (){
                         {MenuItems.map((item, index) => {
                             return(
                                 <li key={index}>
-                                    <a className={MenuItems.cName} href={item.url}>
-                                        {item.title}
-                                    </a>
+                                    <link to='/'><a className={MenuItems.cName} href={item.url}>
+                                                    {item.title}
+                                                </a>
+                                    </link>
                                 </li>                            
                             )
                         })}

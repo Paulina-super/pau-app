@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div className="ItemDet">
-            {detallando ? <ItemDetail dataProp={product}/>: <Spinner /> }          
+            {detallando ? <ItemDetail />: <Spinner /> }          
         </div>
     );
 };
