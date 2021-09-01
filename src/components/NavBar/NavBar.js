@@ -2,7 +2,8 @@ import React from 'react';
 import { MenuItems } from "./MenuItems";
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget.js';
-import {Link} from 'react-router-dom'
+import img from '../NavBar/Samuel.png';
+import {Link} from 'react-router-dom';
 
 
 
@@ -10,18 +11,19 @@ import {Link} from 'react-router-dom'
 function NavBar (){
     return(
         <div className="NavBar">
-            <nav className="NavbarItems">            
-                <ul className='nav-menu active'>
-                    {MenuItems.map((item, index) => {
-                        return(
-                            <li key={index}>
-                                <a className={MenuItems.cName} href={item.url}>
-                                    {item.title}
-                                </a>
-                            </li>                            
-                        )
-                    })}
-                </ul>
+            <nav className="NavbarItems">
+                <link to='/'><img src={img} alt="Logo Samuel"/> </link>          
+                    <ul className='nav-menu active'>
+                        {MenuItems.map((item, index) => {
+                            return(
+                                <li key={index}>
+                                    <a className={MenuItems.cName} href={item.url}>
+                                        {item.title}
+                                    </a>
+                                </li>                            
+                            )
+                        })}
+                    </ul>
                 <CartWidget />
             </nav>
         </div>
