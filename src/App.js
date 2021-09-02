@@ -18,7 +18,7 @@ const App = () => {
             <Route exact path='/'>
               <ItemListContainer greeting='¡Bienvenidos a Tienda Samuel!'/>
             </Route>
-            <Route path='category/:id'>
+            <Route path='category/:categoryId'>
               <ItemListContainer greeting='¡Bienvenidos a Tienda Samuel!'/>
             </Route>
             <Route path='/item/:id'>

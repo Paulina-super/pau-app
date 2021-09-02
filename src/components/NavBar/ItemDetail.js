@@ -5,7 +5,7 @@ import { Card, Image } from 'semantic-ui-react'
 
 
 
-const ItemDetail = (data) => {
+const ItemDetail = ({data}) => {
     const[detalle,setDetalle] = useState([]);
     console.log(data);
 

@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import ItemDetail from '../NavBar/ItemDetail.js';
-
 import axios from 'axios';
 import Spinner from '../Spinner/Spinner.js';
+import {useParams} from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-    const[data,setData] = useState({});
+    const[data,setData] = useState();
     const [detallando,setDetallando]=useState(true);
-    
+    const {categoryId}= useParams()
     
     useEffect(()=>{
         axios('https://fakestoreapi.com/products/${id}')
@@ -18,7 +18,9 @@ const ItemDetailContainer = () => {
     }, []);
 
     return (
+        
         <div className="ItemDet">
+            <h4>{categoryId}</h4>
             {detallando ? <ItemDetail />: <Spinner /> }          
         </div>
     );
