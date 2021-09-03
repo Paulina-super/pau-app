@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import ItemCount from '../Contador/ItemCount.js'
 import axios from 'axios';
-import { Card, Image } from 'semantic-ui-react'
-
+import Item from '../NavBar/Item.js'
 
 
 const ItemDetail = ({data}) => {
     const[detalle,setDetalle] = useState([]);
-    console.log(data);
 
     useEffect(()=>{
         axios('https://fakestoreapi.com/products/${id}')
@@ -17,16 +15,15 @@ const ItemDetail = ({data}) => {
 
 
     return (
-        <Card>
-            <Image src={data.image} wrapped ui={false} />
-            <Card.Header>{data.title}</Card.Header>
-            <Card.Meta>
-                <span className="price">{data.price}</span>
-                <p>{data.description}</p>
-            </Card.Meta>
+        <div className="ItemDetail">
+            {detalle.map((data) => {
+                return <Item key={data.id} data={}/>;
+            })}
             <ItemCount />
+        </div>
             
-        </Card> 
+            
+        
     )
 }
 
