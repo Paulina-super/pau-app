@@ -5,7 +5,7 @@ import Item from '../NavBar/Item.js';
 const ItemList = (props) => {
 
     return (
-        <div className="ItemList">
+        <div className="itemlist">
             {
                 props.products.map((producto) => {
                     return (
