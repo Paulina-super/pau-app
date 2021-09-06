@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Item} from '../NavBar/Item.js';
+import Item from '../NavBar/Item.js';
 
 
 const ItemList = (props) => {
@@ -9,7 +9,7 @@ const ItemList = (props) => {
             {
                 props.products.map((producto) => {
                     return (
-                        <Item key={products.id} data={producto}/>
+                        <Item key={producto.id} data={producto}/>
                     )
                 })
             }
