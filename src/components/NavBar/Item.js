@@ -4,7 +4,7 @@ import ItemCount from '../Contador/ItemCount'
 import ItemDetail from './ItemDetail'
 
 
-const Item = ({Items}) => {
+const Item = ({producto}) => {
   return(     
     <Card>
       <Image src={producto.image} wrapped ui={false} />
