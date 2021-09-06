@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Items} from '../NavBar/Item.js';
+import {Item} from '../NavBar/Item.js';
 
 
 const ItemList = (props) => {
