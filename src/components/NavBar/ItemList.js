@@ -9,7 +9,7 @@ const ItemList = (props) => {
             {
                 props.products.map((producto) => {
                     return (
-                        <Item key={producto.id} data={producto}/>
+                        <Item key={producto.id}/>
                     )
                 })
             }
