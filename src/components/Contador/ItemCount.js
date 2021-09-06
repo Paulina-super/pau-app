@@ -1,8 +1,8 @@
-import React from 'react'
-import { Button } from 'semantic-ui-react'
+import {useState} from 'react';
+import { Button } from 'semantic-ui-react';
 
 const ItemCount = ({stock}) => {
-    const [stockItems, setStockItems] = React.useState(10);
+    const [stockItems, setStockItems] = useState(0);
 
     const handleIncrement=(stock)=>{
        if(stockItems<stock) {

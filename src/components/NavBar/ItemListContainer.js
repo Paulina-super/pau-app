@@ -1,15 +1,34 @@
-import React from 'react'
-import ItemList from '../NavBar/ItemList.js';
+import {useEffect, useState} from 'react';
 import '../NavBar/ItemListContainer.css';
+import '../NavBar/ItemList.js';
+const URL ='https://fakestoreapi.com/products';
 
-const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = ({greeting}) => {
+    
+    const [products,setProducts]= useState([])
+    
+    
+    useEffect(()=>{
+        fetch(URL)
+            .then((response)=>{
+                return response.json();
+            
+            })
+            .then((data)=>{
+                setProducts(data)
+            })
+    }, []);
+
+
+
+
     return (
         <div className="Container">
             <p>{greeting}</p>
-            <ItemList />
+            <ItemList products={products}/>
             
         </div>
     )
-}
+};
 
-export default ItemListContainer
+export default ItemListContainer;

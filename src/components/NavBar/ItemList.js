@@ -1,22 +1,15 @@
 import React, {useState, useEffect} from 'react'
 import Item from '../NavBar/Item.js';
-import axios from 'axios';
 
-const ItemList = () => {
-    const[products,setProducts] = useState([]);
-    
-    
-    useEffect(()=>{
-        axios('https://fakestoreapi.com/products')
-            .then((res) => setProducts(res.data));
-            
-    }, []);
+
+const ItemList = (props) => {
 
     return (
         <div className="ItemList">
-            {products.map((product) => {
-                return <Item key={products.id} data={product}/>;
-            })}
+            {props.products.map((producto) => {
+                return <Item key={products.id} data={producto}/>;
+                })
+            }
         </div>
     );
 };
