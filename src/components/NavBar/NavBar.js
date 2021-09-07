@@ -3,9 +3,6 @@ import { MenuItems } from "./MenuItems";
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget.js';
 import img from '../NavBar/Samuel.png';
-import {Link} from 'react-router-dom';
-
-
 
 
 function NavBar (){
