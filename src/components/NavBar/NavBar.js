@@ -17,10 +17,10 @@ function NavBar (){
                         {MenuItems.map((item, index) => {
                             return(
                                 <li key={index}>
-                                    <Link to='/'><a className={MenuItems.cName} href={item.url}>
+                                    <a className={MenuItems.cName} href={item.url}>
                                                     {item.title}
                                                 </a>
-                                    </Link>
+                                    
                                 </li>                            
                             )
                         })}
