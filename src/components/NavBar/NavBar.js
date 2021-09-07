@@ -9,7 +9,7 @@ function NavBar (){
     return(
         <div className="NavBar">
             <nav className="NavbarItems">
-                <link to='/'><img src={img} alt="Logo Samuel"/> </link>          
+                <img src={img} alt="Logo Samuel"/>        
                     <ul className='nav-menu active'>
                         {MenuItems.map((item, index) => {
                             return(
