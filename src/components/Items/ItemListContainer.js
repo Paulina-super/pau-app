@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
 import '../NavBar/ItemListContainer.css';
-import '../NavBar/ItemList.js';
+import './ItemList.js';
 const URL ='https://fakestoreapi.com/products';
 
-export const ItemListContainer = () => {
+const ItemListContainer = () => {
     
     const [products,setProducts]= useState([]);
     

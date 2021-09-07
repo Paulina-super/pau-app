@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from '../NavBar/Item.js';
+import { Item } from './components/NavBar/Item';
 
 
 const ItemList = (props) => {
