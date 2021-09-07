@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
-import '../NavBar/ItemListContainer.css';
-import './ItemList.js';
+import '../Items/ItemListContainer.css';
+import ItemList from './ItemList.js';
 const URL ='https://fakestoreapi.com/products';
 
 const ItemListContainer = () => {
