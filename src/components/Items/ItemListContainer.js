@@ -1,9 +1,16 @@
 import {useEffect, useState} from 'react';
 import '../Items/ItemListContainer.css';
 import ItemList from './ItemList.js';
+import { collection, getDocs } from "firebase/firestore";
+import dataBase from '.../firebase/firebaseConfig.js';
 const URL ='https://fakestoreapi.com/products';
 
 const ItemListContainer = () => {
+    useEffect(()=>{
+         const nave= getDocs(collection(dataBase,'Naves'));
+    }, []);
+
+
     
     const [products,setProducts]= useState([]);
     
