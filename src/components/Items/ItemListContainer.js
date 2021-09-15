@@ -7,8 +7,12 @@ const URL ='https://fakestoreapi.com/products';
 
 const ItemListContainer = () => {
     useEffect(()=>{
-         const nave= getDocs(collection(dataBase,'Naves'));
-    }, []);
+        const getDatos = async()=>{
+         const nave= await getDocs(collection(dataBase,'Naves'));
+    }
+
+    getDatos();
+}, []);
 
 
     
