@@ -1,14 +1,14 @@
 import {useEffect, useState} from 'react';
 import '../Items/ItemListContainer.css';
 import ItemList from './ItemList.js';
-import { collection, getDocs } from "firebase/firestore";
-import dataBase from '.../firebase/firebaseConfig.js';
+import {query, collection, getDocs } from "firebase/firestore";
+import dataBase from '../../firebase/firebaseConfig.js';
 const URL ='https://fakestoreapi.com/products';
 
 const ItemListContainer = () => {
     useEffect(()=>{
         const getDatos = async()=>{
-         const nave= await getDocs(collection(dataBase,'Naves'));
+         const nave= await getDocs(collection(dataBase,'Naves');
     }
 
     getDatos();
