@@ -3,37 +3,30 @@ import '../Items/ItemListContainer.css';
 import ItemList from './ItemList.js';
 import {query, collection, getDocs } from "firebase/firestore";
 import dataBase from '../../firebase/firebaseConfig.js';
-const URL ='https://fakestoreapi.com/products';
+
 
 const ItemListContainer = () => {
-    useEffect(()=>{
-        const getDatos = async()=>{
-         const nave= await getDocs(collection(dataBase,'Naves');
-    }
-
-    getDatos();
-}, []);
-
-
-    
     const [products,setProducts]= useState([]);
-    
-    
-    useEffect(()=>{
-        fetch(URL)
-            .then((response)=>{
-                return response.json();
-            })
-            .then((data)=>{
-                setProducts(data)
-            })
-    }, []);
 
-    return (
-        <div className="Container">
-            <ItemList products={products}/>
-        </div>
-    )
+        const getProducts= async () => {
+            const docs=[];
+            const nave= query(collection(dataBase,'Naves'));
+
+            const querySnapshot= await getDocs(nave);
+            querySnapshot.forEach(doc)
+
+        };
+
+        useEffect(() => {
+            getProducts();
+            
+        }, []);
+
+        return (
+            <div className="Container">
+                <ItemList products={products}/>
+            </div>
+        )
 };
 
 export default ItemListContainer;
