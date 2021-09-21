@@ -17,6 +17,7 @@ const ItemListContainer = () => {
                 docs.push({...doc.data(), id:doc.id});
                 console.log(docs);
             });
+            setProducts(docs);
 
         };
 
