@@ -13,7 +13,10 @@ const ItemListContainer = () => {
             const nave= query(collection(dataBase,'Naves'));
 
             const querySnapshot= await getDocs(nave);
-            querySnapshot.forEach(doc)
+            querySnapshot.forEach((doc)=>{
+                docs.push({...doc.data(), id:doc.id});
+                console.log(docs);
+            });
 
         };
 
