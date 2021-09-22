@@ -2,14 +2,14 @@ import React from 'react';
 import { MenuItems } from "./MenuItems";
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget.js';
-import img from '../NavBar/Samuel.png';
+import img from '../NavBar/ST.png';
 
 
 function NavBar (){
     return(
         <div className="NavBar">
             <nav className="NavbarItems">
-                <img src={img} alt="Logo Samuel"/>        
+                <img src={img} alt="Logo Federación de Planetas"/>        
                     <ul className='nav-menu active'>
                         {MenuItems.map((item, index) => {
                             return(
