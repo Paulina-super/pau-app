@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import '../Items/ItemListContainer.css';
 import ItemList from './ItemList.js';
-import {query, collection, getDocs } from "firebase/firestore";
+import {query} from "firebase/firestore";
 import dataBase from '../../firebase/firebaseConfig.js';
 
 
@@ -10,10 +10,10 @@ const ItemListContainer = () => {
 
         const getProducts= async () => {
             const docs=[];
-            const nave= query(collection(dataBase,'Naves'));
+            const nave= query(dataBase,'Naves');
 
             const querySnapshot= await getDocs(nave);
-            querySnapshot.forEach((doc)=>{
+            querySnapshot.docs.map((doc)=>{
                 docs.push({...doc.data(), id:doc.id});
                 console.log(docs);
             });
