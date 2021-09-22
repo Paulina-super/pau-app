@@ -7,8 +7,8 @@ import ItemCount from '../Contador/ItemCount'
 const Item = ({producto}) => {
   return(     
     <Card>
-      <Image src={producto.image} wrapped ui={false} />
-      <Card.Header/>
+      <Image src={producto.img} wrapped ui={false} />
+      <Card.Header />
       <Card.Meta />
           
       
