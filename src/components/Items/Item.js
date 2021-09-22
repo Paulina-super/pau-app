@@ -8,7 +8,7 @@ const Item = ({producto}) => {
   return(     
     <Card>
       <Image src={producto.img} wrapped ui={false} />
-      <Card.Header producto={producto.id}/>
+      <Card.Header data={producto.id}/>
       <Card.Meta />
           
       
