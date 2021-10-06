@@ -1,6 +1,6 @@
 import React,{ useState } from "react";
 
-const Formulario=({hadnleAuthentication})=>{
+const Formulario=({handleAuthentication})=>{
     const [user, setUser]= useState('');
     const [pass, setPass]= useState('');
 
@@ -12,9 +12,9 @@ const Formulario=({hadnleAuthentication})=>{
         }
     }
 
-    conste handleSubmit =(e)=>{
+    const handleSubmit =(e)=>{
         e.preventDefault()
-        hadnleAuthentication()
+        handleAuthentication()
     }
     
     return(

@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import './App.css';
 import {Formulario} from './components/Formulario/Formulario';
 import Home from './components/Home/Home';
@@ -7,7 +7,7 @@ import Home from './components/Home/Home';
 const App = () => {
     const[session,setSession]=useState(false)
 
-    const hadnleAuthentication =()=>setSession(!session)
+    const handleAuthentication =()=>setSession(!session)
 
   return (
     
@@ -15,10 +15,10 @@ const App = () => {
         {session ?
           <>
           <Home />
-          <button>Cerrar Sesión</button>
+          <button onClick={()=>setSession(false)}>Cerrar Sesión</button>
           </>
           :      
-          <Formulario />
+          <Formulario handleAuthentication={handleAuthentication}/>
         }
       </div>
       
