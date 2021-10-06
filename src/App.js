@@ -2,6 +2,7 @@ import {useState} from 'react';
 import './App.css';
 import {Formulario} from './components/Formulario/Formulario';
 import Home from './components/Home/Home';
+import{BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 
 const App = () => {
@@ -14,6 +15,21 @@ const App = () => {
       <div className="App">
         {session ?
           <>
+            <Router>
+              <Switch>
+                <Route />
+                <Route />
+                <Route />
+                <Route />
+
+              </Switch>
+
+
+            </Router>
+
+
+
+
           <Home />
           <button onClick={()=>setSession(false)}>Cerrar Sesión</button>
           </>
