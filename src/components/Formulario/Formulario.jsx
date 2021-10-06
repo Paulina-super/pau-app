@@ -1,8 +1,8 @@
 import React,{ useState } from "react";
 
-const Formulario=()=>{
-    const [user, setUser]=useState('');
-    const [pass, setPass]=useState('');
+const Formulario=({hadnleAuthentication})=>{
+    const [user, setUser]= useState('');
+    const [pass, setPass]= useState('');
 
     const handleOnChange = (e) => {
         if (e.target.name === 'user'){
@@ -10,6 +10,11 @@ const Formulario=()=>{
         }else if (e.target.name === 'pass'){
             setPass(e.target.value)
         }
+    }
+
+    conste handleSubmit =(e)=>{
+        e.preventDefault()
+        hadnleAuthentication()
     }
     
     return(
@@ -36,7 +41,7 @@ const Formulario=()=>{
                         />
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" onClick={handleSubmit}>Submit</button>
 
             </form>
         </>

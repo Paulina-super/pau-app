@@ -1,18 +1,25 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import ItemListContainer from './components/Items/ItemListContainer';
 import {Formulario} from './components/Formulario/Formulario';
+import Home from './components/Home/Home';
+
+
 const App = () => {
-    
+    const[session,setSession]=useState(false)
+
+    const hadnleAuthentication =()=>setSession(!session)
 
   return (
     
       <div className="App">
-        <Header title='UFP'
-        subtitle='Shop'/>
-        <ItemListContainer />
-        <Formulario />
+        {session ?
+          <>
+          <Home />
+          <button>Cerrar Sesión</button>
+          </>
+          :      
+          <Formulario />
+        }
       </div>
       
   );
