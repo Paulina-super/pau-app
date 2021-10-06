@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import '../Items/ItemListContainer.css';
 import ItemList from './ItemList.js';
-import {query} from "firebase/firestore";
+import {query,getFirestore} from "firebase/firestore";
 import dataBase from '../../firebase/firebaseConfig.js';
 
 
@@ -15,7 +15,6 @@ const ItemListContainer = () => {
             const querySnapshot= await getDocs(nave);
             querySnapshot.docs.map((doc)=>{
                 docs.push({...doc.data(), id:doc.id});
-                console.log(docs);
             });
             setProducts(docs);
 
