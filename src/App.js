@@ -2,6 +2,9 @@ import {useState} from 'react';
 import './App.css';
 import {Formulario} from './components/Formulario/Formulario';
 import Home from './components/Home/Home';
+import Catalogo from './components/Catalogo/Catalogo';
+import Us from './components/Us/Us';
+import Contacto from './components/Contacto/Contacto';
 import{BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 
