@@ -20,20 +20,16 @@ const App = () => {
           <>
             <Router>
               <Switch>
-                <Route />
-                <Route />
-                <Route />
-                <Route />
+                <Route path="/" exact component={Home}/>
+                <Route path="/Catalogo"  component={Catalogo}/>
+                <Route path="/Federation"  component={Us}/>
+                <Route path="/"  component={Contacto}/>
 
               </Switch>
 
 
             </Router>
-
-
-
-
-          <Home />
+         
           <button onClick={()=>setSession(false)}>Cerrar Sesión</button>
           </>
           :      
