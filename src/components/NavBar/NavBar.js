@@ -1,8 +1,8 @@
 import React from 'react';
-import { MenuItems } from "./MenuItems";
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget.js';
 import img from '../NavBar/ST.png';
+import {Link} from 'react-router-dom';
 
 
 function NavBar (){
@@ -10,19 +10,13 @@ function NavBar (){
         <div className="NavBar">
             <nav className="NavbarItems">
                 <img src={img} alt="Logo Federación de Planetas"/>        
-                    <ul className='nav-menu active'>
-                        {MenuItems.map((item, index) => {
-                            return(
-                                <li key={index}>
-                                    <a className={MenuItems.cName} href={item.url}>
-                                                    {item.title}
-                                                </a>
-                                    
-                                </li>                            
-                            )
-                        })}
-                    </ul>
-                <CartWidget />
+                   
+                    <Link className="navLinks" to="/">Home</Link>
+                    <Link className="navLinks" to="/Catalogo">Catalogo</Link>
+                    <Link className="navLinks" to="/Us">Us</Link>
+                    <Link className="navLinks" to="/Contacto">Contacto</Link>
+
+                    <CartWidget />
             </nav>
         </div>
 
